@@ -1,0 +1,67 @@
+.weatherApp {
+  border: 3px solid blue;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+h1.weather {
+  text-align: left;
+  padding-top: 25px;
+  font-size: 36px;
+  padding-left: 30px;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-top: 20px;
+}
+
+#localButton {
+  background-color: blue;
+  color: white;
+  margin-left: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 20px;
+}
+
+.citySearch {
+  padding: 10px;
+  position: relative;
+  top: 40px;
+  left: 10px;
+  text-indent: 70px;
+  font-size: 30px;
+}
+.description {
+  padding-left: 0px;
+}
+
+.card {
+  display: block;
+  margin: 0 auto;
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
+  );
+  position: relative;
+  bottom: 30px;
+}
+
+.week {
+  text-align: center;
+}
+.days {
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.icons {
+  color: blue;
+  font-size: xx-large;
+  padding-left: 60px;
+}
