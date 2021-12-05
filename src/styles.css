@@ -65,3 +65,9 @@ ul {
   font-size: xx-large;
   padding-left: 60px;
 }
+
+.code {
+  display: block;
+  margin: auto 0;
+  text-align: center;
+}
