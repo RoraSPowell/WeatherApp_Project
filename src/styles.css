@@ -6,13 +6,27 @@
   background-color: #fcfefe;
 }
 
+#weather,
+#localButton,
+.card {
+  font-family: "Mochiy Pop One", sans-serif;
+}
+
+#weather,
+.citySearch {
+  color: #f76b8a;
+}
+
 #weather {
   text-align: left;
   padding-top: 3px;
   font-size: 26px;
   padding-left: 21px;
-  font-family: "Mochiy Pop One", sans-serif;
-  color: #f76b8a;
+}
+
+.citySearch,
+.code {
+  font-family: "Caveat", cursive;
 }
 
 ul {
@@ -30,7 +44,6 @@ ul {
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 20px;
-  font-family: "Mochiy Pop One", sans-serif;
   font-size: 14px;
   border: 1px dotted #eaf6f6;
   transition: 1s;
@@ -54,8 +67,6 @@ ul {
   left: 10px;
   text-indent: 70px;
   font-size: 21px;
-  font-family: "Caveat", cursive;
-  color: #f76b8a;
 }
 .description {
   padding-left: 0px;
@@ -74,7 +85,6 @@ ul {
   position: relative;
   bottom: 30px;
   color: #fcfefe;
-  font-family: "Mochiy Pop One", sans-serif;
   font-size: 13px;
 }
 
@@ -99,6 +109,4 @@ ul {
   display: block;
   margin: auto 0;
   text-align: center;
-  font-family: "Caveat", cursive;
-  color: #66bfbf;
 }
