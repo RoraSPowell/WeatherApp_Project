@@ -60,11 +60,17 @@ ul {
   border: 1px dotted #66bfbf;
 }
 
+#icon {
+  position: fixed;
+  top: 65px;
+  right: 146px;
+}
+
 .citySearch {
   padding: 10px;
   position: relative;
   top: -6px;
-  left: 10px;
+  left: 22px;
   text-indent: 70px;
   font-size: 21px;
 }

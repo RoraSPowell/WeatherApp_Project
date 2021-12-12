@@ -16,7 +16,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/styles.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
       src="https://kit.fontawesome.com/5a8e82943d.js"
@@ -53,9 +55,11 @@
 
           <div class="col">
             <button id="localButton">Current Location</button>
+
             <div class="citySearch">
               <ul>
-                <li id="description"></li>
+                <li id="description"><span></span></li>
+                <img src="" id="icon" />
                 <li>Temperature: <span id="cityTemp"></span>°F</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
@@ -71,6 +75,7 @@
       >
       by Laura Powell
     </div>
+
     <script src="src/script.js"></script>
   </body>
 </html>

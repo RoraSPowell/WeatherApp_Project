@@ -1,4 +1,3 @@
-//1
 function formatDate(dateNow) {
   let date = now.getDate();
   let year = now.getFullYear();
@@ -25,7 +24,7 @@ function formatDate(dateNow) {
   let month = months[now.getMonth()];
 
   let formatDate = `${month} ${date}, ${year}
-  ${day} ${hour}:${minute}  `;
+  ${day} ${hour}:${minute} `;
 
   return formatDate;
 }
@@ -34,11 +33,14 @@ let now = new Date();
 let today = document.querySelector("h5#date");
 today.innerHTML = formatDate(now);
 
-////////////////////////API//////////////////////////////////////////////
-//Make an API call to OpenWeather API
-//Once get the response, display city name and temperature
 function showTemp(response) {
-  console.log(response.data);
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].main);
   document.querySelector("h4#city").innerHTML = response.data.name;
   document.querySelector("#cityTemp").innerHTML = Math.round(
     response.data.main.temp
