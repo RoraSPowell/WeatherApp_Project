@@ -1,15 +1,18 @@
 .weatherApp {
-  border: 3px solid blue;
+  border: 3px solid #66bfbf;
   padding: 20px;
   margin: 20px auto;
   max-width: 800px;
+  background-color: #fcfefe;
 }
 
-h1.weather {
+#weather {
   text-align: left;
-  padding-top: 25px;
-  font-size: 36px;
-  padding-left: 30px;
+  padding-top: 3px;
+  font-size: 26px;
+  padding-left: 21px;
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #f76b8a;
 }
 
 ul {
@@ -20,21 +23,39 @@ ul {
 }
 
 #localButton {
-  background-color: blue;
-  color: white;
+  background-color: #66bfbf;
+  color: #fcfefe;
+  margin-top: 12px;
   margin-left: 50px;
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 20px;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 14px;
+  border: 1px dotted #eaf6f6;
+  transition: 1s;
+}
+
+#localButton:hover {
+  background: radial-gradient(
+    circle at 7.5% 24%,
+    rgb(237, 161, 193) 0%,
+    rgb(250, 178, 172) 25.5%,
+    rgb(190, 228, 210) 62.3%,
+    rgb(215, 248, 247) 93.8%
+  );
+  border: 1px dotted #66bfbf;
 }
 
 .citySearch {
   padding: 10px;
   position: relative;
-  top: 40px;
+  top: -6px;
   left: 10px;
   text-indent: 70px;
-  font-size: 30px;
+  font-size: 21px;
+  font-family: "Caveat", cursive;
+  color: #f76b8a;
 }
 .description {
   padding-left: 0px;
@@ -44,30 +65,40 @@ ul {
   display: block;
   margin: 0 auto;
   background: radial-gradient(
-    592px at 48.2% 50%,
-    rgba(255, 255, 249, 0.6) 0%,
-    rgb(160, 199, 254) 74.6%
+    circle at 7.5% 24%,
+    rgb(237, 161, 193) 0%,
+    rgb(250, 178, 172) 25.5%,
+    rgb(190, 228, 210) 62.3%,
+    rgb(215, 248, 247) 93.8%
   );
   position: relative;
   bottom: 30px;
+  color: #fcfefe;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 13px;
 }
 
-.week {
-  text-align: center;
+#date {
+  font-size: 17px;
 }
-.days {
-  font-weight: bolder;
-  font-size: x-large;
+.btn-search {
+  background-color: #66bfbf;
+  color: #fcfefe;
+  border: 1px solid #eaf6f6;
+  padding: 3px 14px;
+  box-shadow: 3px 4px 5px #fcfefe;
+  transition: 1s;
 }
 
-.icons {
-  color: blue;
-  font-size: xx-large;
-  padding-left: 60px;
+.btn-search:hover {
+  background-color: #fcfefe;
+  color: #66bfbf;
 }
 
 .code {
   display: block;
   margin: auto 0;
   text-align: center;
+  font-family: "Caveat", cursive;
+  color: #66bfbf;
 }

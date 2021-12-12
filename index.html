@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <script
@@ -43,18 +48,18 @@
                     autofocus="on"
                     id="cityInput"
                   />
-                  <input type="submit" value="Search" class="btn btn-primary" />
+                  <input type="submit" value="Search" class="btn-search" />
                 </form>
               </div>
             </div>
-            <button id="localButton">Current Location</button>
           </div>
 
           <div class="col">
+            <button id="localButton">Current Location</button>
             <div class="citySearch">
               <ul>
                 <li id="description"></li>
-                <li><span id="cityTemp"></span>℉</li>
+                <li>Temperature: <span id="cityTemp"></span>°F</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
