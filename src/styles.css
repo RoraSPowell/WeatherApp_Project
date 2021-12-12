@@ -64,13 +64,13 @@ ul {
 
 #icon {
   position: relative;
-  top: 13px;
+  top: -4px;
   left: 156px;
 }
 .citySearch {
   padding: 10px;
   position: relative;
-  top: -69px;
+  top: -90px;
   left: -8px;
   text-indent: 70px;
   font-size: 31px;
