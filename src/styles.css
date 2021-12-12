@@ -19,6 +19,7 @@
 
 #weather {
   text-align: left;
+  margin-left: 25px;
   padding-top: 3px;
   font-size: 26px;
   padding-left: 21px;
@@ -40,7 +41,7 @@ ul {
   background-color: #66bfbf;
   color: #fcfefe;
   margin-top: 12px;
-  margin-left: 50px;
+  margin-left: 25px;
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 20px;
@@ -58,22 +59,37 @@ ul {
     rgb(215, 248, 247) 93.8%
   );
   border: 1px dotted #66bfbf;
+  cursor: pointer;
 }
 
 #icon {
-  position: fixed;
-  top: 65px;
-  right: 146px;
+  position: relative;
+  top: 13px;
+  left: 156px;
 }
-
 .citySearch {
   padding: 10px;
   position: relative;
-  top: -6px;
-  left: 22px;
+  top: -69px;
+  left: -8px;
   text-indent: 70px;
-  font-size: 21px;
+  font-size: 31px;
 }
+
+.units {
+  font-size: 15px;
+}
+
+.active {
+  text-decoration: none;
+  color: #f76b8a;
+}
+
+.active:hover {
+  cursor: initial;
+  color: #f76b8a;
+}
+
 .description {
   padding-left: 0px;
 }
@@ -109,6 +125,7 @@ ul {
 .btn-search:hover {
   background-color: #fcfefe;
   color: #66bfbf;
+  cursor: pointer;
 }
 
 .code {

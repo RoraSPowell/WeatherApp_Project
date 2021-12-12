@@ -51,16 +51,21 @@
                 </form>
               </div>
             </div>
+            <button id="localButton">Try Your Current Location</button>
           </div>
 
           <div class="col">
-            <button id="localButton">Current Location</button>
-
+            <img src="" id="icon" />
             <div class="citySearch">
               <ul>
-                <li id="description"><span></span></li>
-                <img src="" id="icon" />
-                <li>Temperature: <span id="cityTemp"></span>°F</li>
+                <li id="description"></li>
+                <li>
+                  Temperature: <span id="cityTemp"></span>
+                  <span class="units"
+                    ><a id="convertFah" class="active" href="#">°F</a> |
+                    <a id="convertCel" class="unitLinkC" href="#">°C</a></span
+                  >
+                </li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
               </ul>

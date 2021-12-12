@@ -35,16 +35,16 @@ today.innerHTML = formatDate(now);
 
 function showTemp(response) {
   let iconElement = document.querySelector("#icon");
-
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
+
+  fahrenheitTemp = response.data.main.temp;
+
   document.querySelector("h4#city").innerHTML = response.data.name;
-  document.querySelector("#cityTemp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#cityTemp").innerHTML = Math.round(fahrenheitTemp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   document.querySelector("#description").innerHTML =
@@ -78,10 +78,33 @@ function displayLocal(event) {
   navigator.geolocation.getCurrentPosition(searchLocal);
 }
 
+function convertToCelcius(event) {
+  event.preventDefault();
+  let celciusTemp = Math.round(((fahrenheitTemp - 32) * 5) / 9);
+  document.querySelector("#cityTemp").innerHTML = celciusTemp;
+  tempConvertC2F.classList.remove("active");
+  tempConvertF2C.classList.add("active");
+}
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  document.querySelector("#cityTemp").innerHTML = Math.round(fahrenheitTemp);
+  tempConvertF2C.classList.remove("active");
+  tempConvertC2F.classList.add("active");
+}
+
+let fahrenheitTemp = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let localInfo = document.querySelector("#localButton");
 localInfo.addEventListener("click", displayLocal);
+
+let tempConvertF2C = document.querySelector("#convertCel");
+tempConvertF2C.addEventListener("click", convertToCelcius);
+
+let tempConvertC2F = document.querySelector("#convertFah");
+tempConvertC2F.addEventListener("click", convertToFahrenheit);
 
 searchCity("New York");
