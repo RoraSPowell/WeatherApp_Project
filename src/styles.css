@@ -133,3 +133,22 @@ ul {
   margin: auto 0;
   text-align: center;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Mochiy Pop One", sans-serif;
+}
+
+.weekdays {
+  color: #f76b8a;
+  font-size: 22px;
+}
+.max-min {
+  color: #66bfbf;
+  font-size: 16px;
+}
+
+.min {
+  opacity: 0.6;
+}
