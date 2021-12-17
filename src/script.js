@@ -33,6 +33,36 @@ let now = new Date();
 let today = document.querySelector("h5#date");
 today.innerHTML = formatDate(now);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row justify-content-md-center">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `   
+            <div class="col-md-auto">
+              <div class="weekdays">${day}</div>
+              <br />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/169/169367.png"
+                alt=""
+                width="56"
+              />
+              <br />
+              <br />
+              <div class="max-min">
+                <span class="max">18° </span> | <span class="min">12°</span>
+              </div>
+            </div>
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemp(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
@@ -108,3 +138,4 @@ let tempConvertC2F = document.querySelector("#convertFah");
 tempConvertC2F.addEventListener("click", convertToFahrenheit);
 
 searchCity("New York");
+displayForecast();
