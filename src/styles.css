@@ -22,7 +22,7 @@
   margin-left: 25px;
   padding-top: 3px;
   font-size: 26px;
-  padding-left: 21px;
+  padding-left: 10px;
 }
 
 .citySearch,
@@ -30,11 +30,20 @@
   font-family: "Caveat", cursive;
 }
 
+#icon {
+  position: relative;
+  top: 29px;
+  left: 160px;
+}
 ul {
   list-style: none;
   margin-left: 0px;
   padding-left: 0px;
-  padding-top: 20px;
+  padding-top: 30px;
+}
+
+li {
+  padding: 10px;
 }
 
 #localButton {
@@ -62,11 +71,6 @@ ul {
   cursor: pointer;
 }
 
-#icon {
-  position: relative;
-  top: -4px;
-  left: 156px;
-}
 .citySearch {
   padding: 10px;
   position: relative;
@@ -138,6 +142,8 @@ ul {
   margin-top: 20px;
   text-align: center;
   font-family: "Mochiy Pop One", sans-serif;
+  position: relative;
+  top: -71px;
 }
 
 .weekdays {

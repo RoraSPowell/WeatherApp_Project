@@ -22,10 +22,8 @@ function formatDate(dateNow) {
   ];
 
   let month = months[now.getMonth()];
-
   let formatDate = `${month} ${date}, ${year}
   ${day} ${hour}:${minute} `;
-
   return formatDate;
 }
 
@@ -37,16 +35,13 @@ function formatWeekDay(daystamp) {
   let date = new Date(daystamp * 1000);
   let day = date.getDay();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
   return days[day];
 }
 
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-
   let forecastHTML = `<div class="row justify-content-xl-center">`;
-
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
@@ -75,7 +70,6 @@ function displayForecast(response) {
         `;
     }
   });
-
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
@@ -83,7 +77,7 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "20e37d41a4e67f65c6c33caa40e9d0f9";
-  let apiURL = ` https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiURL = ` https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=Imperial`;
   console.log(apiURL);
   axios.get(apiURL).then(displayForecast);
 }
@@ -95,16 +89,13 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
-
   fahrenheitTemp = response.data.main.temp;
-
   document.querySelector("h4#city").innerHTML = response.data.name;
   document.querySelector("#cityTemp").innerHTML = Math.round(fahrenheitTemp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-
   getForecast(response.data.coord);
 }
 
