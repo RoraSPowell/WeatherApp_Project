@@ -105,6 +105,8 @@ function searchCity(city) {
   let unit = "imperial";
   let apiURL = `${endpoint}q=${city}&appid=${apiKey}&units=${unit}`;
   axios.get(apiURL).then(showTemp);
+  tempConvertF2C.classList.remove("active");
+  tempConvertC2F.classList.add("active");
 }
 
 function handleSubmit(event) {
