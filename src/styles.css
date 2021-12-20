@@ -132,10 +132,11 @@ li {
   cursor: pointer;
 }
 
-.code {
-  display: block;
-  margin: auto 0;
-  text-align: center;
+.addLine {
+  border: none;
+  border-top: 5px dotted #66bfbf;
+  position: relative;
+  top: -55px;
 }
 
 .weather-forecast {
@@ -143,7 +144,7 @@ li {
   text-align: center;
   font-family: "Mochiy Pop One", sans-serif;
   position: relative;
-  top: -71px;
+  top: -50px;
 }
 
 .weekdays {
@@ -157,4 +158,10 @@ li {
 
 .min {
   opacity: 0.6;
+}
+
+.code {
+  display: block;
+  margin: auto 0;
+  text-align: center;
 }
